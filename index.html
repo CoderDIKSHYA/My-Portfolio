@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dikshya Runuwal - B.Tech CSE Student & Full-Stack Developer Portfolio. Exploring software development, React, Node.js, and AI." />
+  <title>Dikshya Runuwal | Full-Stack Developer Portfolio</title>
+  
+  <!-- CSS Framework & Fonts -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- --- Sticky Navigation Bar --- -->
+  <nav class="custom-nav">
+    <div class="nav-container">
+      <a class="nav-brand text-gradient" href="#">Dikshya Runuwal</a>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="#hero">Home</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#experience">Achievements</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="theme-toggle-container">
+        <label class="theme-switch" for="theme-toggle" aria-label="Toggle dark/light theme">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider-round">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </span>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- --- Hero Section --- -->
+  <header id="hero" class="hero">
+    <canvas id="particles-canvas" class="hero-canvas"></canvas>
+    <div class="container-custom">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-tag">
+            <i class="fas fa-code-branch"></i> Open to Software Development Internships & Roles
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Dikshya Runuwal</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            I am a <span class="typed-text"></span><span class="typed-cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            B.Tech Computer Science student at LPU specializing in building modern web applications. 
+            I engineer performant full-stack systems using <b>React, Node.js, and Databases</b>, while exploring 
+            interactive designs and AI integrations to solve real-world problems.
+          </p>
+          <div class="hero-actions">
+            <a href="cv/Dikshya_Runuwal_Resume.pdf" download="Dikshya_Runuwal_Resume.pdf" class="btn-premium btn-gradient download-btn-cv">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#contact" class="btn-premium btn-outline">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper reveal reveal-right">
+          <div class="hero-image-card">
+            <img src="images/mypic.png" alt="Dikshya Runuwal Portrait" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- --- Recruiter Metrics / Stats Banner --- -->
+    <section class="stats-banner">
+      <div class="container-custom">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 class="counter"><a href="https://leetcode.com/u/runuwaldikshya/" target="_blank" style="text-decoration: none; color: inherit;">250+</a></h3>
+            <p>LeetCode Solved</p>
+          </div>
+          <div class="stat-item">
+            <h3>10+</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat-item">
+            <h3>SIH</h3>
+            <p>Hackathon Participant</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="resume-dl-count">120+</h3>
+            <p>Recruiter Downloads</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- Skills & Technologies Section --- -->
+    <section id="skills" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Technical Expertise</h2>
+        <p>A comprehensive breakdown of tools, programming languages, and frameworks in my developer arsenal.</p>
+      </div>
+
+      <div class="skills-filter">
+        <button class="filter-btn active" data-filter="all">All Tech</button>
+        <button class="filter-btn" data-filter="lang">Languages</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="database">Databases & DevOps</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-card card-glass" data-category="lang">
+          <i class="devicon-c-plain"></i>
+          <span>C</span>
+          <small>Advanced</small>
+        </div>
+        <div class="skill-card card-glass" data-category="lang">
+          <i class="devicon-cplusplus-plain"></i>
+          <span>C++</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="lang">
+          <i class="devicon-java-plain"></i>
+          <span>Java</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="lang">
+          <i class="devicon-javascript-plain"></i>
+          <span>JavaScript</span>
+          <small>Advanced</small>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card card-glass" data-category="frontend">
+          <i class="devicon-html5-plain"></i>
+          <span>HTML5</span>
+          <small>Advanced</small>
+        </div>
+        <div class="skill-card card-glass" data-category="frontend">
+          <i class="devicon-css3-plain"></i>
+          <span>CSS3</span>
+          <small>Advanced</small>
+        </div>
+        <div class="skill-card card-glass" data-category="frontend">
+          <i class="devicon-react-original"></i>
+          <span>React.js</span>
+          <small>Advanced</small>
+        </div>
+        <div class="skill-card card-glass" data-category="frontend">
+          <i class="devicon-nextjs-original"></i>
+          <span>Next.js</span>
+          <small>Intermediate</small>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card card-glass" data-category="backend">
+          <i class="devicon-nodejs-plain"></i>
+          <span>Node.js</span>
+          <small>Advanced</small>
+        </div>
+        <div class="skill-card card-glass" data-category="backend">
+          <i class="devicon-express-original"></i>
+          <span>Express.js</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="backend">
+          <i class="devicon-socketio-original"></i>
+          <span>Socket.io</span>
+          <small>Intermediate</small>
+        </div>
+
+        <!-- Databases & DevOps -->
+        <div class="skill-card card-glass" data-category="database">
+          <i class="devicon-mysql-plain"></i>
+          <span>MySQL</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="database">
+          <i class="devicon-mongodb-plain"></i>
+          <span>MongoDB</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="database">
+          <i class="devicon-amazonwebservices-plain-wordmark"></i>
+          <span>AWS</span>
+          <small>Intermediate</small>
+        </div>
+        <div class="skill-card card-glass" data-category="database">
+          <i class="devicon-docker-plain"></i>
+          <span>Docker</span>
+          <small>Intermediate</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- Projects Section --- -->
+    <section id="projects" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Interactive Showcase</h2>
+        <p>A handpicked selection of production-ready applications demonstrating full-stack engineering skills.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: RechargeHub (FEATURED) -->
+        <article class="project-card card-glass project-featured" data-project="rechargehub">
+          <div class="project-img-container project-icon-placeholder">
+            <div class="featured-badge"><i class="fas fa-star"></i> Featured Project</div>
+            <i class="fas fa-wallet"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-pill">HTML5/CSS3</span>
+              <span class="tag-pill">JavaScript</span>
+              <span class="tag-pill">Node.js</span>
+            </div>
+            <h3 class="project-title">RechargeHub</h3>
+            <p class="project-desc">
+              A secure digital bill & mobile recharge platform simulating service catalogs, checkout pipelines, and receipts.
+            </p>
+            <ul class="project-features-list">
+              <li><i class="fas fa-check-circle"></i> Provider-based plan lookup and dynamic catalog filtering.</li>
+              <li><i class="fas fa-check-circle"></i> Client checkout security controls & transactional token validation.</li>
+              <li><i class="fas fa-check-circle"></i> Downloadable PDF invoices with local browser audit history.</li>
+            </ul>
+            <div class="project-footer-actions">
+              <div class="project-links">
+                <a href="https://github.com/CoderDIKSHYA/RechargeHub-Final-Project" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://rechargehub-amber.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+              <button class="btn-premium btn-outline btn-sm btn-view-details">
+                <i class="fas fa-info-circle"></i> Recruiter Insights
+              </button>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-shield-alt"></i> Safe input sanitization</span>
+              <span><i class="fas fa-receipt"></i> Transaction audits</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Studivo -->
+        <article class="project-card card-glass" data-project="studivo">
+          <div class="project-img-container project-icon-placeholder" style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);">
+            <i class="fas fa-book-reader"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-pill">React.js</span>
+              <span class="tag-pill">Vite</span>
+              <span class="tag-pill">Local Storage</span>
+            </div>
+            <h3 class="project-title">Studivo</h3>
+            <p class="project-desc">
+              A comprehensive study workspace environment incorporating timers, resource boards, and flashcard logs.
+            </p>
+            <ul class="project-features-list">
+              <li><i class="fas fa-check-circle"></i> Focus timer dashboards with automatic subject logging.</li>
+              <li><i class="fas fa-check-circle"></i> Collaborative note boards supporting raw markdown texts.</li>
+              <li><i class="fas fa-check-circle"></i> Flashcard storage database utilising local data directories.</li>
+            </ul>
+            <div class="project-footer-actions">
+              <div class="project-links">
+                <a href="https://github.com/CoderDIKSHYA/Studivo" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://studivo-nine.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+              <button class="btn-premium btn-outline btn-sm btn-view-details">
+                <i class="fas fa-info-circle"></i> Recruiter Insights
+              </button>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-bolt"></i> Local Data Sync</span>
+              <span><i class="fas fa-clock"></i> Focus Metrics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Nutri AI -->
+        <article class="project-card card-glass" data-project="nutri-ai">
+          <div class="project-img-container project-icon-placeholder" style="background: linear-gradient(135deg, #34d399 0%, #059669 100%);">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-pill">React.js</span>
+              <span class="tag-pill">Node.js</span>
+              <span class="tag-pill">Gemini AI</span>
+            </div>
+            <h3 class="project-title">Nutri AI</h3>
+            <p class="project-desc">
+              An AI-driven fitness and diet management system providing custom meal guides and instant calorie statistics.
+            </p>
+            <ul class="project-features-list">
+              <li><i class="fas fa-check-circle"></i> Generative AI meal plan planner synced with daily calorie caps.</li>
+              <li><i class="fas fa-check-circle"></i> Interactive calorie calculations using nutrition data APIs.</li>
+              <li><i class="fas fa-check-circle"></i> Private login directories and secure history logging.</li>
+            </ul>
+            <div class="project-footer-actions">
+              <div class="project-links">
+                <a href="https://github.com/CoderDIKSHYA/NutriFit-AI" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://my-health-fitness-react-app.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+              <button class="btn-premium btn-outline btn-sm btn-view-details">
+                <i class="fas fa-info-circle"></i> Recruiter Insights
+              </button>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-chart-line"></i> 98% LightHouse Score</span>
+              <span><i class="fas fa-brain"></i> AI Integrations</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: PeakSense -->
+        <article class="project-card card-glass" data-project="peaksense">
+          <div class="project-img-container project-icon-placeholder" style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag-pill">React.js</span>
+              <span class="tag-pill">Chart.js</span>
+              <span class="tag-pill">CSV Parser</span>
+            </div>
+            <h3 class="project-title">PeakSense</h3>
+            <p class="project-desc">
+              Smart utility platform forecasting grid load demand spikes in Delhi, built for Smart India Hackathon.
+            </p>
+            <ul class="project-features-list">
+              <li><i class="fas fa-check-circle"></i> City-wide power grid forecasting dashboard interface.</li>
+              <li><i class="fas fa-check-circle"></i> Dynamic analytical charting powered by Chart.js suites.</li>
+              <li><i class="fas fa-check-circle"></i> Processed municipal utility datasets via custom parsers.</li>
+            </ul>
+            <div class="project-footer-actions">
+              <div class="project-links">
+                <a href="https://github.com/CoderDIKSHYA/Delhi-electricity-consumption" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://peak-sense.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+                  <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+              </div>
+              <button class="btn-premium btn-outline btn-sm btn-view-details">
+                <i class="fas fa-info-circle"></i> Recruiter Insights
+              </button>
+            </div>
+            <div class="project-metrics">
+              <span><i class="fas fa-code-branch"></i> 36-Hr Dev Sprint</span>
+              <span><i class="fas fa-chart-bar"></i> Analytics Suite</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- --- Achievements & Experience Section (Timeline) --- -->
+    <section id="experience" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Hackathons & Milestones</h2>
+        <p>Highlights of active participation in collaborative developer environments and real-world engineering sprints.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content card-glass">
+            <span class="timeline-date">September 2023 — 36-Hour Hackathon</span>
+            <h3 class="timeline-title">Smart India Hackathon (SIH) Participant</h3>
+            <span class="timeline-org">Ministry of Education, Government of India</span>
+            <ul class="timeline-details">
+              <li>Collaborated in a team of 6 to develop **PeakSense**, a smart utility platform forecasting and analyzing Delhi's electricity peak-consumption grid.</li>
+              <li>Engineered the frontend layout using React and responsive elements to present consumption graphs.</li>
+              <li>Handled data modeling connections to map historical city consumption.</li>
+            </ul>
+            <div class="timeline-actions">
+              <a href="https://github.com/CoderDIKSHYA/Delhi-electricity-consumption" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+                <i class="fab fa-github"></i> Repository
+              </a>
+              <a href="https://peak-sense.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live Site
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- Certifications Section --- -->
+    <section id="certifications" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Professional Certifications</h2>
+        <p>Verifications of continuous learning and deep dives into algorithms, programming paradigms, and AI.</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/AOS.jpg" alt="Algorithms on Strings Certificate" />
+          </div>
+          <h3 class="cert-title">Algorithms on Strings</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/AOS.jpg" download>Download PDF</a>
+        </div>
+
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/DPGA.jpg" alt="Dynamic Programming Certificate" />
+          </div>
+          <h3 class="cert-title">Dynamic Programming & Greedy</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/DPGA.jpg" download>Download PDF</a>
+        </div>
+
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/chatgptadvanced.jpg" alt="ChatGPT Advanced Certificate" />
+          </div>
+          <h3 class="cert-title">ChatGPT Advanced</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/chatgptadvanced.jpg" download>Download PDF</a>
+        </div>
+
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/aproximation.jpg" alt="Approximation Algorithms Certificate" />
+          </div>
+          <h3 class="cert-title">Approximation Algorithms</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/aproximation.jpg" download>Download PDF</a>
+        </div>
+
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/buildai.jpg" alt="Build with AI Certificate" />
+          </div>
+          <h3 class="cert-title">Build with AI</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/buildai.jpg" download>Download PDF</a>
+        </div>
+
+        <div class="cert-card card-glass">
+          <div class="cert-img-container">
+            <img src="images/serverside.jpg" alt="Server Side Development Certificate" />
+          </div>
+          <h3 class="cert-title">Server Side Development</h3>
+          <a class="btn-premium btn-gradient btn-sm cert-btn" href="images/serverside.jpg" download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- Education Section --- -->
+    <section id="education" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Educational Background</h2>
+        <p>My academic foundation in Computer Science and secondary sciences.</p>
+      </div>
+
+      <div class="edu-cards">
+        <div class="edu-card card-glass">
+          <div class="edu-main">
+            <h3>Lovely Professional University</h3>
+            <p class="edu-sub">Bachelor of Technology in Computer Science & Engineering</p>
+            <p class="edu-loc">Punjab, India</p>
+            <p class="edu-grade">CGPA: <span>7.0 / 10.0</span></p>
+          </div>
+          <span class="edu-date">Aug 2022 — Present</span>
+        </div>
+
+        <div class="edu-card card-glass">
+          <div class="edu-main">
+            <h3>Auxilium Convent School</h3>
+            <p class="edu-sub">Higher Secondary Education (12th Grade - Science)</p>
+            <p class="edu-loc">Bandel, Kolkata, West Bengal</p>
+            <p class="edu-grade">Percentage: <span>82.4%</span></p>
+          </div>
+          <span class="edu-date">Apr 2018 — Mar 2020</span>
+        </div>
+
+        <div class="edu-card card-glass">
+          <div class="edu-main">
+            <h3>Auxilium Convent School</h3>
+            <p class="edu-sub">Secondary School Certification (10th Grade)</p>
+            <p class="edu-loc">Bandel, Kolkata, West Bengal</p>
+            <p class="edu-grade">Percentage: <span>85.6%</span></p>
+          </div>
+          <span class="edu-date">Apr 2016 — Mar 2018</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- --- Contact Section --- -->
+    <section id="contact" class="section-padding container-custom reveal">
+      <div class="section-header">
+        <h2>Contact Me</h2>
+        <p>Interested in collaborating or discussing internships? Feel free to drop a message.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-method card-glass" style="padding: 1.25rem;">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:runuwaldikshya@gmail.com">runuwaldikshya@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method card-glass" style="padding: 1.25rem;">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <p><a href="tel:+918910432022">+91 89104 32022</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method card-glass" style="padding: 1.25rem;">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>West Bengal / Punjab, India</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form card-glass" onsubmit="event.preventDefault(); alert('Message simulation sent successfully! I will get back to you shortly.'); this.reset();">
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" class="form-control-custom" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="form-control-custom" placeholder="johndoe@company.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-control-custom" placeholder="Hi Dikshya, I would love to interview you for..." required></textarea>
+          </div>
+          <button type="submit" class="btn-premium btn-gradient w-100" style="border: none;">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- --- Draggable Recruiter Terminal Widget --- -->
+  <div id="terminal" class="terminal-widget">
+    <div class="terminal-header">
+      <div class="terminal-controls">
+        <button class="terminal-btn terminal-close" title="Close" aria-label="Close terminal"></button>
+        <button class="terminal-btn terminal-minimize" title="Minimize" aria-label="Minimize terminal"></button>
+        <button class="terminal-btn terminal-maximize" title="Maximize" aria-label="Maximize terminal" disabled></button>
+      </div>
+      <div class="terminal-title">dikshya-recruiter-terminal</div>
+      <div></div>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-welcome">
+        ====================================================<br>
+        Welcome, Recruiter! [Version 1.0.4]<br>
+        Type <b>help</b> to list all available profile query commands.<br>
+        ====================================================
+      </div>
+      <div id="terminal-output" class="terminal-output"></div>
+      <div class="terminal-input-line">
+        <span class="terminal-prompt">dikshya-portfolio$</span>
+        <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" placeholder="type a command..." aria-label="Terminal command input" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminal Launcher Toggle Button -->
+  <div id="terminal-launcher" class="terminal-launcher" title="Open Recruiter Terminal" aria-label="Open Recruiter Terminal">
+    <i class="fas fa-terminal"></i>
+  </div>
+
+  <!-- --- Dynamic Project Details Modal --- -->
+  <div id="project-modal" class="custom-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content-wrapper card-glass">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <h3 id="modal-project-title" class="modal-title">Project Title</h3>
+      <div id="modal-tech-stack" class="modal-tech-stack"></div>
+      <hr style="border-color: var(--card-border); margin: 0.5rem 0;">
+      <div class="modal-body">
+        <h6>Key System Highlights:</h6>
+        <ul id="modal-highlights"></ul>
+        <div id="modal-recruiter-insights" style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-left: 4px solid var(--accent); border-radius: 4px;"></div>
+      </div>
+      <div class="modal-footer">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-premium btn-outline btn-sm">
+          <i class="fab fa-github"></i> Source Code
+        </a>
+        <a id="modal-live-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-premium btn-gradient btn-sm">
+          <i class="fas fa-external-link-alt"></i> Live Site
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- --- Footer --- -->
+  <footer class="custom-footer">
+    <div class="container-custom">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/dikshyarunuwal/" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/CoderDIKSHYA" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub Profile" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://leetcode.com/u/runuwaldikshya/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Leetcode Profile" aria-label="Leetcode Profile">
+          <i class="fas fa-code"></i>
+        </a>
+      </div>
+      <p class="footer-text">
+        &copy; 2026 Dikshya Runuwal. Engineered with passion and Vanilla CSS/JS. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
