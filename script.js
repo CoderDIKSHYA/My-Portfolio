@@ -429,11 +429,10 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'skills':
-        appendTerminalLine('<b>Languages:</b> C, C++, Java, JavaScript<br>' +
-          '<b>Frontend:</b> HTML5, CSS3, React.js, Next.js, jQuery, Bootstrap<br>' +
-          '<b>Backend:</b> Node.js, Express.js, Socket.io, PHP<br>' +
-          '<b>Databases:</b> MongoDB, MySQL<br>' +
-          '<b>DevOps & Cloud:</b> AWS, Docker', 'output-info');
+        appendTerminalLine('<b>Languages:</b> Java, JavaScript, PHP, C++, C, SQL<br>' +
+          '<b>Frontend:</b> React.js, Angular.js, Next.js, HTML5, CSS3, Bootstrap, jQuery<br>' +
+          '<b>Backend & Frameworks:</b> Spring Boot, Spring MVC, Hibernate, JDBC, Node.js, Express.js, Socket.io, Maven<br>' +
+          '<b>Databases & Tools:</b> MySQL, MongoDB, Git, GitHub, VS Code, AWS, Docker', 'output-info');
         break;
 
       case 'projects':
