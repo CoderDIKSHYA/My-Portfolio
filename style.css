@@ -1576,10 +1576,10 @@ body.theme-amber {
   transform: scale(1.1);
 }
 
-.theme-amethyst { background: #a855f7; }
-.theme-cyan { background: #06b6d4; }
-.theme-emerald { background: #10b981; }
-.theme-amber { background: #f59e0b; }
+.theme-btn.theme-amethyst { background: #a855f7; }
+.theme-btn.theme-cyan { background: #06b6d4; }
+.theme-btn.theme-emerald { background: #10b981; }
+.theme-btn.theme-amber { background: #f59e0b; }
 
 /* Floating Stats (Likes & Views) Counter */
 .floating-stats {
