@@ -664,4 +664,158 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
+  /* ==========================================================================
+     Dikshya Runuwal - Color Theme Switcher
+     ========================================================================== */
+  const themeBtns = document.querySelectorAll('.theme-btn');
+  const activeTheme = localStorage.getItem('portfolio-theme') || 'amethyst';
+
+  function setTheme(themeName) {
+    // Remove all theme classes
+    document.body.classList.remove('theme-amethyst', 'theme-cyan', 'theme-emerald', 'theme-amber');
+    // Add current theme class
+    document.body.classList.add(`theme-${themeName}`);
+    
+    // Save in storage
+    localStorage.setItem('portfolio-theme', themeName);
+
+    // Update active button
+    themeBtns.forEach(btn => {
+      if (btn.getAttribute('data-theme') === themeName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Bind clicks
+  themeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const theme = btn.getAttribute('data-theme');
+      setTheme(theme);
+    });
+  });
+
+  // Apply default or loaded theme
+  setTheme(activeTheme);
+
+  /* ==========================================================================
+     Likes & Views Counter (localStorage backed)
+     ========================================================================== */
+  const viewCountText = document.getElementById('view-count-text');
+  const likeCountText = document.getElementById('like-count-text');
+  const likeBtn = document.getElementById('like-btn');
+
+  // Load stats
+  let views = parseInt(localStorage.getItem('portfolio-views') || '142'); // Seed initial count
+  let likes = parseInt(localStorage.getItem('portfolio-likes') || '87');  // Seed initial count
+  let hasLiked = localStorage.getItem('portfolio-has-liked') === 'true';
+
+  // Increment views on load
+  views += 1;
+  localStorage.setItem('portfolio-views', views);
+  if (viewCountText) viewCountText.textContent = views;
+  if (likeCountText) likeCountText.textContent = likes;
+
+  // Set initial like button state
+  if (hasLiked && likeBtn) {
+    likeBtn.classList.add('liked');
+  }
+
+  if (likeBtn) {
+    likeBtn.addEventListener('click', () => {
+      hasLiked = !hasLiked;
+      localStorage.setItem('portfolio-has-liked', hasLiked);
+
+      if (hasLiked) {
+        likes += 1;
+        likeBtn.classList.add('liked');
+      } else {
+        likes -= 1;
+        likeBtn.classList.remove('liked');
+      }
+
+      localStorage.setItem('portfolio-likes', likes);
+      if (likeCountText) likeCountText.textContent = likes;
+    });
+  }
+
+  /* ==========================================================================
+     Recruiter Chatbot Logic
+     ========================================================================== */
+  const chatToggleBtn = document.getElementById('chat-toggle-btn');
+  const chatWindow = document.getElementById('chat-window');
+  const chatCloseBtn = document.getElementById('chat-close-btn');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatChips = document.querySelectorAll('.chat-chip');
+
+  const botResponses = {
+    gpa: "I am studying for my B.Tech in CSE at Lovely Professional University (Class of 2026). My current CGPA is <b>7.5 / 10.0</b>! Prior to that, I completed my 12th standard with <b>82.4%</b> and 10th standard with <b>85.6%</b>.",
+    tech: "I am a Full-Stack developer! My key technologies are:<br>• <b>Languages:</b> Java, JavaScript, PHP, C++, C, SQL<br>• <b>Frameworks:</b> Spring Boot, Spring MVC, Hibernate, JDBC, Node.js, Express.js, React.js, Angular.js, Next.js<br>• <b>Tools & DevOps:</b> Maven, Git, VS Code, AWS, Docker",
+    projects: "Here are my top projects:<br>• <b>RechargeHub</b> - A secure billing & mobile recharge platform built with Node.js.<br>• <b>Studivo</b> - An interactive student workspace platform built with React & LocalStorage.<br>• <b>Nutri AI</b> - An AI-powered fitness calorie tracker using React.<br>• <b>PeakSense</b> - An electricity grid load analytics dashboard built for the Smart India Hackathon.",
+    contact: "Let's get in touch! You can email me at <a href='mailto:runuwaldikshya@gmail.com'>runuwaldikshya@gmail.com</a>, call me at +91 89104 32022, or message me on <a href='https://www.linkedin.com/in/dikshyarunuwal/' target='_blank'>LinkedIn</a>! You can also download my resume using the button in the header."
+  };
+
+  function toggleChat() {
+    if (chatWindow) chatWindow.classList.toggle('hidden');
+  }
+
+  if (chatToggleBtn) chatToggleBtn.addEventListener('click', toggleChat);
+  if (chatCloseBtn) chatCloseBtn.addEventListener('click', toggleChat);
+
+  function appendChatMessage(sender, text) {
+    const msg = document.createElement('div');
+    msg.className = `chat-msg ${sender}`;
+    msg.innerHTML = text;
+    if (chatMessages) {
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    return msg;
+  }
+
+  chatChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const query = chip.getAttribute('data-query');
+      const questionText = chip.textContent;
+
+      // Post user question
+      appendChatMessage('user', questionText);
+
+      // Disable chips temporarily
+      chatChips.forEach(c => c.style.pointerEvents = 'none');
+
+      // Post typing indicator
+      const typingIndicator = appendChatMessage('bot typing', 'Typing...');
+
+      // Simulate bot thinking
+      setTimeout(() => {
+        if (typingIndicator) typingIndicator.remove();
+        appendChatMessage('bot', botResponses[query]);
+        chatChips.forEach(c => c.style.pointerEvents = 'auto');
+      }, 1000);
+    });
+  });
+
+  /* ==========================================================================
+     Circular Skills Gauges - Scroll Animation
+     ========================================================================== */
+  const circleProgresses = document.querySelectorAll('.circle-progress');
+
+  const circleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const circle = entry.target;
+        const pct = parseInt(circle.getAttribute('data-pct') || '0');
+        const offset = 377 - (377 * pct) / 100;
+        circle.style.strokeDashoffset = offset;
+        circleObserver.unobserve(circle); // Animate only once
+      }
+    });
+  }, { threshold: 0.1 });
+
+  circleProgresses.forEach(circle => {
+    circleObserver.observe(circle);
+  });
 });
